@@ -3,7 +3,7 @@
   include("std/std.php");
   include("cv_sprogs.php");
 
-  debutPage("CV de Nicolas Salaun", "strict", "public/css/styles.css https://fonts.googleapis.com/css?family=Barlow|Open+Sans http://fr.allfont.net/allfont.css?fonts=open-sans-light");
+  debutPage("CV de Nicolas Salaun", "strict", "public/css/styles.css https://fonts.googleapis.com/css?family=Barlow|Open+Sans");
 
   	finblockquote();
 
@@ -106,7 +106,7 @@
     				hr();
 
             p();
-    				echo ahref("https://www.linkedin.com/in/nicolas-salaün-246226155/", "LinkedIn", "", "", "target='_blank'");
+    				echo ahref("https://www.linkedin.com/in/nicolas-salaün-246226155/", "LinkedIn", "", "", "onclick=\"target='_blank';\"");
             finp();
 
     			findiv(); # Fin div infos_reseaux
@@ -272,7 +272,7 @@
 
         bouton("pdf", "", "button", "Générer le PDF");
 
-        bouton("sources", "", "button", "Télécharger le code source");
+        bouton("sources", "onclick=\"window.location.href = 'http://forge.info.univ-angers.fr/~nsalau/cv_SALAUN.zip';\"", "button", "Télécharger le code source");
 
     findiv(); # Fin div boutons
 

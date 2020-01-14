@@ -136,12 +136,12 @@ if ($grm=="std") {
   echo "<p class='align_right'>\n" ;
 } ; # fin de si
 
-echo "<a href=\"http://validator.w3.org/check?uri=referer\">\n" ;
+echo "<a href=\"http://validator.w3.org/check?uri=http://forge.info.univ-angers.fr/~nsalau/cv_index.php\">\n" ;
 echo "<img src=\"public/images/valid.png\" height=\"31\" width=\"88\"  alt=\"Valid XHTML\" />\n" ;
 echo "</a>\n" ;
 
 echo "&nbsp;&nbsp;&nbsp;" ;
-$std = "http://forge.info.univ-angers.fr/~gh/std.css" ;
+$std = "http://forge.info.univ-angers.fr/~nsalau/public/css/styles.css" ;
 echo "<a href='http://jigsaw.w3.org/css-validator/validator?uri=".urlencode($std)."'>\n" ;
 
 echo "<img src=\"public/images/css.gif\" height=\"31\" width=\"88\"  alt=\"Valid CSS2\" />\n" ;

@@ -37,8 +37,8 @@ table td {
 }
 
 #partie_gauche p, #partie_gauche a {
-	font-family: "Open Sans Light", sans-serif;
-	font-weight: 400;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 100;
 	font-size: 15px;
 }
 
@@ -61,8 +61,8 @@ table td {
 
 #partie_droite h2 {
 	margin-top: 10px;
-	font-family: "Open Sans Light", sans-serif;
-	font-weight: 200;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 100;
 	font-size: 32px;
 	color: #02315b;
 }
@@ -76,8 +76,8 @@ table td {
 }
 
 #partie_droite p , #partie_droite li{
-	font-family: "Open Sans Light", sans-serif;
-	font-weight: 200;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 100;
 	font-size: 15px;
 	color: #004b8d;
 }
