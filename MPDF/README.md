@@ -1,52 +1,62 @@
-mPDF is a PHP class which generates PDF files from UTF-8 encoded HTML. It is based on [FPDF](http://www.fpdf.org/)
-and [HTML2FPDF](http://html2fpdf.sourceforge.net/) (see [CREDITS](CREDITS.txt)), with a number of enhancements.
-mPDF was written by Ian Back and is released under the [GNU GPL v2 licence](LICENSE.txt).
+mpdf
+====
 
-[![Build Status](https://travis-ci.org/mpdf/mpdf.svg?branch=development)](https://travis-ci.org/mpdf/mpdf)
+[![Latest Stable Version](https://poser.pugx.org/kartik-v/mpdf/v/stable)](https://packagist.org/packages/kartik-v/mpdf)
+[![License](https://poser.pugx.org/kartik-v/mpdf/license)](https://packagist.org/packages/kartik-v/mpdf)
+[![Total Downloads](https://poser.pugx.org/kartik-v/mpdf/downloads)](https://packagist.org/packages/kartik-v/mpdf)
+[![Monthly Downloads](https://poser.pugx.org/kartik-v/mpdf/d/monthly)](https://packagist.org/packages/kartik-v/mpdf)
+[![Daily Downloads](https://poser.pugx.org/kartik-v/mpdf/d/daily)](https://packagist.org/packages/kartik-v/mpdf)
+
+---
+
+### Use the [mpdf/mpdf](https://github.com/mpdf/mpdf) repo instead
+
+> Effective 08-Apr-2016, I am redirecting and encouraging folks to use the above repo - to ensure a single codebase for mpdf management in future. This repo was initially created since there was no other package having the 6.x release that could be installed via composer. For folks coming over from Yii, note that the [yii2-mpdf extension](https://github.com/kartik-v/yii2-mpdf) has been modified to use the [mpdf/mpdf](https://github.com/mpdf/mpdf) repo
+
+---
+
+This is a fork of the [mPDF library](http://mpdf1.com/). mPDF is a PHP class which generates PDF files from UTF-8 encoded HTML. It is based on [FPDF](http://www.fpdf.org/) and [HTML2FPDF](http://html2fpdf.sourceforge.net/), with a number of enhancements.
+It is slower than the original scripts e.g. HTML2FPDF and produces larger files when using Unicode fonts, but support for CSS styles etc. has been much enhanced.
+
+This fork adds composer and packagist support.
+
+Why this repo?
+--------------
+
+I needed this for building many of my dependent PHP based projects that use this wonderful PDF library. Managing package dependencies via a central repository was important for folks like me. I use composer to manage package dependencies via packages on packagist.org. This repository allows access to some specific features and needs:
+
+1. Adds ability to update library and manage dependencies via composer in your PHP based applications
+2. Uses the latest development version (v6.0beta) of the mPDF library. I needed the latest development version via composer, which was not found elsewhere. mPDF 6.0 can utilise OpenType layout tables to display complex scripts. It will be of most interest to those wishing to use Arabic or Indic scripts (as well as Khmer, Lao, Myanmar etc.). It will  also improve the display of Thai, Vietnamese and Hebrew.
+3. This beta release (v6.0) contains fonts (open source) to cover almost every imaginable script / language. It also includes additional fonts for Chinese, Japanese, and Korean.
 
 Installation
-============
+------------
+The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
-Preferred installation method is via composer and its packagist package [mpdf/mpdf](https://packagist.org/packages/mpdf/mpdf).
+Either run
 
-Manual installation
--------------------
+```
+$ php composer.phar require mpdf/mpdf "@dev"
+```
 
-   * Download the [.zip release file](https://github.com/mpdf/mpdf/releases) and unzip it
-   * Create a folder e.g. /mpdf on your server
-   * Upload all of the files to the server, maintaining the folders as they are
-   * Ensure that you have write permissions set (CHMOD 6xx or 7xx) for the following folders:
+or add
 
-     /ttfontdata/ - used to cache font data; improves performance a lot
+```
+"mpdf/mpdf": "@dev"
+```
 
-     /tmp/ - used for some images and ProgressBar
+to the ```require``` section of your `composer.json` file.
 
-     /graph_cache/ - if you are using [JpGraph](http://jpgraph.net) in conjunction with mPDF
+Refer the [readme instructions](https://github.com/mpdf/mpdf/blob/master/README.txt) for other details on setting up the extension.
 
-To test the installation, point your browser to the basic example file:
 
-    [path_to_mpdf_folder]/mpdf/examples/example01_basic.php
+Usage
+-----
 
-If you wish to define a different folder for temporary files rather than /tmp/ see the note on
-[Folder for temporary files](https://mpdf.github.io/installation-setup/folders-for-temporary-files.html)
-in the section on Installation & Setup in the [manual](https://mpdf.github.io/).
+PHP 5.4 and later can use namespaces to access. Refer the [documentation manual](https://mpdf.github.io) or the [upstream mpdf site](http://mpdf1.com) for further details and understanding of the library.
 
-If you have problems, please read the section on [troubleshooting](https://mpdf.github.io/troubleshooting/known-issues.html) in the manual.
+```php
+use \mPDF;
 
-Online manual
-=============
-
-Online manual is available at https://mpdf.github.io/.
-
-Unit Testing
-============
-
-Unit testing for mPDF is done using [PHPUnit](https://phpunit.de/).
-
-To get started, run `composer install` from the command line while in the mPDF root directory
-(you'll need [composer installed first](https://getcomposer.org/download/)).
-
-To execute tests, run `vendor/bin/phpunit` from the command line while in the mPDF root directory.
-
-Any assistance writing unit tests for mPDF is greatly appreciated. If you'd like to help, please
-note that any PHP file located in the `/tests/` directory will be autoloaded when unit testing.
+$pdf = new mPDF();
+```
