@@ -276,10 +276,14 @@
 
       form("", "post");
 
+        p();
+
         bouton("pdf", "name='genererPDF'", "submit", "Générer le PDF");
 
         bouton("sources", "onclick=\"window.location.href = 'http://forge.info.univ-angers.fr/~nsalau/cv_SALAUN.zip';\"", "button", "Télécharger le code source");
-        
+
+        finp();
+
       finform();
 
     findiv(); # Fin div boutons
