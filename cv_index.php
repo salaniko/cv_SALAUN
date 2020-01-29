@@ -3,6 +3,10 @@
   include("std/std.php");
   include("cv_sprogs.php");
 
+  if(isset($_POST['genererPDF'])) {
+    generer_pdf();
+  }
+
   debutPage("CV de Nicolas Salaun", "strict", "public/css/styles.css https://fonts.googleapis.com/css?family=Barlow|Open+Sans");
 
   	finblockquote();
@@ -270,9 +274,13 @@
 
     div("", "boutons"); # Début div boutons
 
-        bouton("pdf", "", "button", "Générer le PDF");
+      form("", "post");
+
+        bouton("pdf", "name='genererPDF'", "submit", "Générer le PDF");
 
         bouton("sources", "onclick=\"window.location.href = 'http://forge.info.univ-angers.fr/~nsalau/cv_SALAUN.zip';\"", "button", "Télécharger le code source");
+        
+      finform();
 
     findiv(); # Fin div boutons
 
