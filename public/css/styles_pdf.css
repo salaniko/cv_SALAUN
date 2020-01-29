@@ -1,0 +1,122 @@
+/*
+Author: Nicolas Salaün
+Version: 1.0.0
+*/
+
+
+#bloc_cv {
+	width: 100%;
+	height: 100%;
+	padding: 0px 20px 0px 20px;
+}
+
+#bloc_formations_competences {
+	margin-top: 20px;
+	width: 700px;
+	background-color: white;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;}
+
+
+#portrait {
+	width: 200px;
+}
+
+#partie_gauche h1 {
+	font-family: "Open Sans", sans-serif;
+	font-size: 26px;
+	font-weight: 900;
+	color: #034076;
+	margin-bottom: 0px;
+}
+
+#partie_gauche p, #partie_gauche a {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 100;
+	font-size: 15px;
+}
+
+#partie_gauche h2 {
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+}
+
+#partie_gauche hr {
+	background-color: #034076;
+	border: 2px solid #034076;
+}
+
+#partie_droite h1 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-family: 'Barlow', sans-serif;
+	font-size: 50px;
+}
+
+#partie_droite h2 {
+	margin-top: 10px;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 100;
+	font-size: 32px;
+	color: #02315b;
+}
+
+#partie_droite h3 {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: "Open Sans", sans-serif;
+	font-size: 19px;
+	color: #02315b;
+}
+
+#partie_droite p , #partie_droite li{
+	font-family: "Open Sans", sans-serif;
+	font-weight: 100;
+	font-size: 15px;
+	color: #004b8d;
+}
+
+#partie_droite hr {
+	background-color: gray;
+	border: 2px solid gray;
+}
+
+#parcours_resume p {
+	font-style: italic;
+	color: gray;
+}
+
+.lieu {
+	font-style: italic;
+	color: #62a1d8;
+}
+
+#partie_gauche {
+	width: 30%;
+	background-color: #62a1d8;
+	border-style: none dotted none none;
+	border-width: 10px;
+	border-color: #034076;
+}
+
+#partie_droite {
+	width: 70%;
+	background-color: #e3ecf6;
+	border-style: none;
+}
+
+#formations {
+	width: 50%;
+	padding-top: 0;
+	vertical-align: top;
+}
+
+#competences {
+	width: 50%;
+	padding-top: 0;
+	vertical-align: top;
+}
+
