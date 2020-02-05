@@ -3,7 +3,7 @@
   include("std/std.php");
   include("cv_sprogs.php");
 
-  if(isset($_POST['genererPDF'])) {
+  if(isset($_GET['pdf'])) {
     generer_pdf();
   }
 
@@ -274,17 +274,8 @@
 
     div("", "boutons"); # Début div boutons
 
-      form("", "post");
-
-        p();
-
-        bouton("pdf", "name='genererPDF'", "submit", "Générer le PDF");
-
-        bouton("sources", "onclick=\"window.location.href = 'http://forge.info.univ-angers.fr/~nsalau/cv_SALAUN.zip';\"", "button", "Télécharger le code source");
-
-        finp();
-
-      finform();
+        echo href("cv_index.php?pdf", "Générer le PDF");
+        echo href("http://forge.info.univ-angers.fr/~nsalau/cv_SALAUN.zip", "Télécharger le code source");
 
     findiv(); # Fin div boutons
 
