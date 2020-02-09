@@ -4,7 +4,8 @@
   include("cv_sprogs.php");
 
   if(isset($_GET['pdf'])) {
-    generer_pdf();
+    $url = "http://forge.info.univ-angers.fr/~nsalau/cv_index.php";
+    generer_pdf($url);
   }
 
   debutPage("CV de Nicolas Salaun", "strict", "public/css/styles.css https://fonts.googleapis.com/css?family=Barlow|Open+Sans");
